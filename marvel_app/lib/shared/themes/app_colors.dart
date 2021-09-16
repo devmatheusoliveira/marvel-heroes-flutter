@@ -30,6 +30,7 @@ class AppColors {
     Color(0xffFF758C),
   ];
   static final List<Color> gradienteBlack = [
+    Colors.black.withOpacity(0),
     Colors.black.withOpacity(0.3),
     Colors.black.withOpacity(0.75),
   ];
