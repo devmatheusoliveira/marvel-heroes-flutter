@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:marvel_app/shared/themes/text_styles.dart';
 import 'package:marvel_app/shared/widgets/card_tile_widget.dart';
-import 'package:marvel_app/shared/widgets/categoru_bar_widget.dart';
+import 'package:marvel_app/shared/widgets/cards_view_widget.dart';
+import 'package:marvel_app/shared/widgets/category_bar_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -65,19 +66,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             CategoryBarWidget(),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Row(
-                  children: [
-                    CardTileWidget(),
-                    CardTileWidget(),
-                    CardTileWidget(),
-                  ],
-                ),
-              ),
-            )
+            CardsViewWidget(),
+            CardsViewWidget(),
+            CardsViewWidget(),
           ],
         ),
       ),

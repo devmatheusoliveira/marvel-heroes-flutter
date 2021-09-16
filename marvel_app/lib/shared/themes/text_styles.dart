@@ -3,14 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:marvel_app/shared/themes/app_colors.dart';
 
-/*
-  gilroy-bold
-  gilroy-heavy
-  gilroy-medium
-  gilroy-regular
-  gilroy-semibold
-*/
-
 class TextStyles {
   //1
   static final profileTitle = TextStyle(
@@ -50,13 +42,13 @@ class TextStyles {
   );
   //7
   static final sectionTitle = TextStyle(
-    color: Colors.black,
+    color: AppColors.primaryRed,
     fontFamily: 'gilroy-bold',
     fontSize: 18,
   );
   //8
   static final description = TextStyle(
-    color: Colors.black,
+    color: AppColors.primaryGrey,
     fontFamily: 'gilroy-medium',
     fontSize: 14,
   );
