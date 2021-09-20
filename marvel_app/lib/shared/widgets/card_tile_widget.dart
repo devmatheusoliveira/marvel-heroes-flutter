@@ -3,12 +3,15 @@ import 'package:marvel_app/shared/themes/app_colors.dart';
 import 'package:marvel_app/shared/themes/text_styles.dart';
 
 class CardTileWidget extends StatelessWidget {
-  final String name;
-  final String alterEgo;
+  final String? name;
+  final String? alterEgo;
+  final String? imagePath;
+
   const CardTileWidget({
     Key? key,
-    required this.name,
-    required this.alterEgo,
+    this.name,
+    this.alterEgo,
+    this.imagePath,
   }) : super(key: key);
 
   @override
@@ -27,7 +30,7 @@ class CardTileWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
                   fit: BoxFit.cover, //Lembrar de usar se não dá erro
-                  image: AssetImage("assets/chars/spider-man.png"),
+                  image: AssetImage("assets/${imagePath!}"),
                 ),
               ),
             ),

@@ -4,7 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:marvel_app/shared/models/abilities_model.dart';
 import 'package:marvel_app/shared/models/caracteristics/person_caracteristics_model.dart';
 
-class PersonTypeModel {
+class PersonModel {
   final String? name;
   final String? alterEgo;
   final String? imagePath;
@@ -13,7 +13,7 @@ class PersonTypeModel {
   final AbilitiesModel? abilities;
   final List<String>? movies;
 
-  PersonTypeModel({
+  PersonModel({
     this.name,
     this.alterEgo,
     this.imagePath,
@@ -23,7 +23,7 @@ class PersonTypeModel {
     this.movies,
   });
 
-  PersonTypeModel copyWith({
+  PersonModel copyWith({
     String? name,
     String? alterEgo,
     String? imagePath,
@@ -32,7 +32,7 @@ class PersonTypeModel {
     AbilitiesModel? abilities,
     List<String>? movies,
   }) {
-    return PersonTypeModel(
+    return PersonModel(
       name: name ?? this.name,
       alterEgo: alterEgo ?? this.alterEgo,
       imagePath: imagePath ?? this.imagePath,
@@ -55,8 +55,8 @@ class PersonTypeModel {
     };
   }
 
-  factory PersonTypeModel.fromMap(Map<String, dynamic> map) {
-    return PersonTypeModel(
+  factory PersonModel.fromMap(Map<String, dynamic> map) {
+    return PersonModel(
       name: map['name'],
       alterEgo: map['alterEgo'],
       imagePath: map['imagePath'],
@@ -69,12 +69,12 @@ class PersonTypeModel {
 
   String toJson() => json.encode(toMap());
 
-  factory PersonTypeModel.fromJson(String source) =>
-      PersonTypeModel.fromMap(json.decode(source));
+  factory PersonModel.fromJson(String source) =>
+      PersonModel.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'PersonTypeModel(name: $name, alterEgo: $alterEgo, imagePath: $imagePath, biography: $biography, caracteristics: $caracteristics, abilities: $abilities, movies: $movies)';
+    return 'PersonModel(name: $name, alterEgo: $alterEgo, imagePath: $imagePath, biography: $biography, caracteristics: $caracteristics, abilities: $abilities, movies: $movies)';
   }
 
   @override
@@ -82,7 +82,7 @@ class PersonTypeModel {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
 
-    return other is PersonTypeModel &&
+    return other is PersonModel &&
         other.name == name &&
         other.alterEgo == alterEgo &&
         other.imagePath == imagePath &&

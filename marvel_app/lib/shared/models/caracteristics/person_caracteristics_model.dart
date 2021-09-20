@@ -1,11 +1,12 @@
 import 'dart:convert';
 
 import 'package:marvel_app/shared/models/caracteristics/caracteristics_metrics_model.dart';
+import 'package:marvel_app/shared/models/caracteristics/heigth_metric_model.dart';
 
 class CaracteristicsModel {
   final String? birth;
-  final CaracteristicMetric? weight;
-  final CaracteristicMetric? height;
+  final weightMetrics? weight;
+  final heigthMetric? height;
   final String? universe;
 
   CaracteristicsModel({
@@ -17,8 +18,8 @@ class CaracteristicsModel {
 
   CaracteristicsModel copyWith({
     String? birth,
-    CaracteristicMetric? weight,
-    CaracteristicMetric? height,
+    weightMetrics? weight,
+    heigthMetric? height,
     String? universe,
   }) {
     return CaracteristicsModel(
@@ -41,8 +42,8 @@ class CaracteristicsModel {
   factory CaracteristicsModel.fromMap(Map<String, dynamic> map) {
     return CaracteristicsModel(
       birth: map['birth'],
-      weight: CaracteristicMetric.fromMap(map['weight']),
-      height: CaracteristicMetric.fromMap(map['height']),
+      weight: weightMetrics.fromMap(map['weight']),
+      height: heigthMetric.fromMap(map['height']),
       universe: map['universe'],
     );
   }

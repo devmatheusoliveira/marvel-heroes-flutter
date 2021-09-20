@@ -1,11 +1,12 @@
 import 'dart:convert';
 
 class AbilitiesModel {
-  final String? force;
-  final String? inteligence;
-  final String? agility;
-  final String? endurance;
-  final String? velocity;
+  final int? force;
+  final int? inteligence;
+  final int? agility;
+  final int? endurance;
+  final int? velocity;
+
   AbilitiesModel({
     this.force,
     this.inteligence,
@@ -14,14 +15,12 @@ class AbilitiesModel {
     this.velocity,
   });
 
-  
-
   AbilitiesModel copyWith({
-    String? force,
-    String? inteligence,
-    String? agility,
-    String? endurance,
-    String? velocity,
+    int? force,
+    int? inteligence,
+    int? agility,
+    int? endurance,
+    int? velocity,
   }) {
     return AbilitiesModel(
       force: force ?? this.force,
@@ -54,7 +53,8 @@ class AbilitiesModel {
 
   String toJson() => json.encode(toMap());
 
-  factory AbilitiesModel.fromJson(String source) => AbilitiesModel.fromMap(json.decode(source));
+  factory AbilitiesModel.fromJson(String source) =>
+      AbilitiesModel.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -64,21 +64,21 @@ class AbilitiesModel {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is AbilitiesModel &&
-      other.force == force &&
-      other.inteligence == inteligence &&
-      other.agility == agility &&
-      other.endurance == endurance &&
-      other.velocity == velocity;
+        other.force == force &&
+        other.inteligence == inteligence &&
+        other.agility == agility &&
+        other.endurance == endurance &&
+        other.velocity == velocity;
   }
 
   @override
   int get hashCode {
     return force.hashCode ^
-      inteligence.hashCode ^
-      agility.hashCode ^
-      endurance.hashCode ^
-      velocity.hashCode;
+        inteligence.hashCode ^
+        agility.hashCode ^
+        endurance.hashCode ^
+        velocity.hashCode;
   }
 }
