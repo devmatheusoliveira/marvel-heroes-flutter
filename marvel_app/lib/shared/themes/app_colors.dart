@@ -7,7 +7,7 @@ class AppColors {
   static final primaryDark = Color(0xff313140);
   static final primaryGrey = Color(0xffB7B7C8);
   static final primarySilver = Color(0xffF8F8F8);
-  static final primaryWite = Color(0xffFFFFFF);
+  static final primaryWhite = Color(0xffFFFFFF);
 
   static final List<Color> gradienteBlue = [
     Color(0xff005BEA),
@@ -32,7 +32,7 @@ class AppColors {
   static final List<Color> gradienteBlack = [
     Colors.black.withOpacity(0),
     Colors.black.withOpacity(0.3),
-    Colors.black.withOpacity(0.75),
+    Colors.black.withOpacity(1),
   ];
   static final List<Color> gradienteDark = [
     Colors.black.withOpacity(0.40),

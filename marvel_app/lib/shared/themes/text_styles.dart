@@ -6,13 +6,13 @@ import 'package:marvel_app/shared/themes/app_colors.dart';
 class TextStyles {
   //1
   static final profileTitle = TextStyle(
-    color: Colors.black,
+    color: AppColors.primaryWhite,
     fontFamily: 'gilroy-heavy',
     fontSize: 40,
   );
   //2
   static final profileSubtitle = TextStyle(
-    color: Colors.grey,
+    color: AppColors.primaryWhite,
     fontFamily: 'gilroy-semibold',
     fontSize: 16,
   );
@@ -24,19 +24,19 @@ class TextStyles {
   );
   //4
   static final homeSubtitle = TextStyle(
-    color: Colors.black,
+    color: AppColors.primaryGrey,
     fontFamily: 'gilroy-semibold',
     fontSize: 14,
   );
   //5
   static final cardTitle = TextStyle(
-    color: AppColors.primaryWite,
+    color: AppColors.primaryWhite,
     fontFamily: 'gilroy-heavy',
     fontSize: 20,
   );
   //6
   static final cardSubtitle = TextStyle(
-    color: AppColors.primaryWite,
+    color: AppColors.primaryWhite,
     fontFamily: 'gilroy-medium',
     fontSize: 10,
   );
@@ -48,13 +48,13 @@ class TextStyles {
   );
   //8
   static final description = TextStyle(
-    color: AppColors.primaryGrey,
+    color: AppColors.primaryWhite,
     fontFamily: 'gilroy-medium',
     fontSize: 14,
   );
   //9
   static final caracteristic = TextStyle(
-    color: Colors.black,
+    color: AppColors.primaryWhite,
     fontFamily: 'gilroy-medium',
     fontSize: 12,
   );

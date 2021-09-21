@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:marvel_app/modules/Home/home_page_controller.dart';
 import 'package:marvel_app/shared/themes/text_styles.dart';
-import 'package:marvel_app/shared/widgets/card_view/cards_view_widget.dart';
+import 'package:marvel_app/shared/widgets/cards_view_widget.dart';
 import 'package:marvel_app/shared/widgets/category_bar_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -59,11 +59,11 @@ class _HomePageState extends State<HomePage> {
                 child: Text.rich(
                   TextSpan(
                     text: "Bem vindo ao Marvel Heroes \n",
-                    style: TextStyles.profileSubtitle,
+                    style: TextStyles.homeSubtitle,
                     children: [
                       TextSpan(
                         text: "Escolha o seu \npersonagem",
-                        style: TextStyles.profileTitle,
+                        style: TextStyles.homeTitle,
                       ),
                     ],
                   ),

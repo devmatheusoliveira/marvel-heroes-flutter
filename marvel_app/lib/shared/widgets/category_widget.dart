@@ -35,7 +35,7 @@ class CategoryWidget extends StatelessWidget {
           child: SvgPicture.asset(
             imageAsset,
             alignment: Alignment.center,
-            color: AppColors.primaryWite,
+            color: AppColors.primaryWhite,
             height: 40,
             width: 40,
           ),

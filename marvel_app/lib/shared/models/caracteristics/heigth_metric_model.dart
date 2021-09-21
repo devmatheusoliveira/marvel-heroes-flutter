@@ -1,33 +1,34 @@
 import 'dart:convert';
 
 class heigthMetric {
-  final double? heigth;
+  final double? value;
   final String? unity;
+
   heigthMetric({
-    this.heigth,
+    this.value,
     this.unity,
   });
 
   heigthMetric copyWith({
-    double? heigth,
+    double? value,
     String? unity,
   }) {
     return heigthMetric(
-      heigth: heigth ?? this.heigth,
+      value: value ?? this.value,
       unity: unity ?? this.unity,
     );
   }
 
   Map<String, dynamic> toMap() {
     return {
-      'heigth': heigth,
+      'value': value,
       'unity': unity,
     };
   }
 
   factory heigthMetric.fromMap(Map<String, dynamic> map) {
     return heigthMetric(
-      heigth: map['heigth'],
+      value: map['value'],
       unity: map['unity'],
     );
   }
@@ -38,17 +39,17 @@ class heigthMetric {
       heigthMetric.fromMap(json.decode(source));
 
   @override
-  String toString() => 'heigthMetric(heigth: $heigth, unity: $unity)';
+  String toString() => 'heigthMetric(value: $value, unity: $unity)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
     return other is heigthMetric &&
-        other.heigth == heigth &&
+        other.value == value &&
         other.unity == unity;
   }
 
   @override
-  int get hashCode => heigth.hashCode ^ unity.hashCode;
+  int get hashCode => value.hashCode ^ unity.hashCode;
 }

@@ -1,54 +1,55 @@
 import 'dart:convert';
 
-class weightMetrics {
-  final double? weight;
+class weightMetric {
+  final int? value;
   final String? unity;
-  weightMetrics({
-    this.weight,
+
+  weightMetric({
+    this.value,
     this.unity,
   });
 
-  weightMetrics copyWith({
-    double? weight,
+  weightMetric copyWith({
+    int? value,
     String? unity,
   }) {
-    return weightMetrics(
-      weight: weight ?? this.weight,
+    return weightMetric(
+      value: value ?? this.value,
       unity: unity ?? this.unity,
     );
   }
 
   Map<String, dynamic> toMap() {
     return {
-      'weight': weight,
+      'value': value,
       'unity': unity,
     };
   }
 
-  factory weightMetrics.fromMap(Map<String, dynamic> map) {
-    return weightMetrics(
-      weight: map['weight'],
+  factory weightMetric.fromMap(Map<String, dynamic> map) {
+    return weightMetric(
+      value: map['value'],
       unity: map['unity'],
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory weightMetrics.fromJson(String source) =>
-      weightMetrics.fromMap(json.decode(source));
+  factory weightMetric.fromJson(String source) =>
+      weightMetric.fromMap(json.decode(source));
 
   @override
-  String toString() => 'weightMetrics(weight: $weight, unity: $unity)';
+  String toString() => 'weightMetric(value: $value, unity: $unity)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is weightMetrics &&
-        other.weight == weight &&
+    return other is weightMetric &&
+        other.value == value &&
         other.unity == unity;
   }
 
   @override
-  int get hashCode => weight.hashCode ^ unity.hashCode;
+  int get hashCode => value.hashCode ^ unity.hashCode;
 }

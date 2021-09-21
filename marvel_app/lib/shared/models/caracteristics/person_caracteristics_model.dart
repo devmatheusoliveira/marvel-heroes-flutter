@@ -5,7 +5,7 @@ import 'package:marvel_app/shared/models/caracteristics/heigth_metric_model.dart
 
 class CaracteristicsModel {
   final String? birth;
-  final weightMetrics? weight;
+  final weightMetric? weight;
   final heigthMetric? height;
   final String? universe;
 
@@ -18,7 +18,7 @@ class CaracteristicsModel {
 
   CaracteristicsModel copyWith({
     String? birth,
-    weightMetrics? weight,
+    weightMetric? weight,
     heigthMetric? height,
     String? universe,
   }) {
@@ -42,7 +42,7 @@ class CaracteristicsModel {
   factory CaracteristicsModel.fromMap(Map<String, dynamic> map) {
     return CaracteristicsModel(
       birth: map['birth'],
-      weight: weightMetrics.fromMap(map['weight']),
+      weight: weightMetric.fromMap(map['weight']),
       height: heigthMetric.fromMap(map['height']),
       universe: map['universe'],
     );

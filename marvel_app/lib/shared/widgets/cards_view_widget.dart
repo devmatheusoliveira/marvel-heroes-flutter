@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marvel_app/modules/Home/home_page_controller.dart';
 import 'package:marvel_app/shared/models/person_model.dart';
 import 'package:marvel_app/shared/themes/text_styles.dart';
-import '../card_tile_widget.dart';
+import 'card_tile_widget.dart';
 
 class CardsViewWidget extends StatefulWidget {
   final String categoryName;
