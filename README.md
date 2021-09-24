@@ -1,3 +1,13 @@
+# Marvel Heroes em Flutter
+
+* Para fazer o desafio, foi ultilizado como referência os layouts disponibilizados pela DevDhallenge, buscando sempre deixar o mais fiel possível. Aprendendo o design pattern MVC
+no Flutter, logo tentei adaptar o que consegui fazer para este padrão.
+
+
+
+## Abaixo tem toda a documentação do desafio, como vem para começar:
+---
+
 <br />
 <p align="center">
   <a href="https://umpontoseis.com/">
